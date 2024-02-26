@@ -1,0 +1,51 @@
+div {
+  max-width: 400px; /* Set a maximum width for the component */
+  margin: 0 auto; /* Center the component horizontally */
+  padding: 20px; /* Add some padding to the component */
+  border: 1px solid #ccc; /* Add a border to the component */
+  border-radius: 8px; /* Add border-radius for rounded corners */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow */
+}
+
+h2 {
+  color: #333; /* Set heading text color */
+}
+
+form {
+  margin-bottom: 20px; /* Add some margin to the bottom of the form */
+}
+
+label {
+  display: block; /* Display labels as block elements */
+  margin-bottom: 8px; /* Add margin below labels */
+}
+
+input {
+  width: 100%; /* Make input fields take full width of their container */
+  padding: 8px; /* Add padding to input fields */
+  margin-bottom: 12px; /* Add margin below input fields */
+  box-sizing: border-box; /* Include padding and border in the input's total width */
+}
+
+button {
+  background-color: #4caf50; /* Set a green background color for the button */
+  color: #fff; /* Set text color to white */
+  padding: 10px 15px; /* Add padding to the button */
+  border: none; /* Remove border */
+  border-radius: 4px; /* Add border-radius for rounded corners */
+  cursor: pointer; /* Add a pointer cursor on hover */
+}
+
+button:disabled {
+  background-color: #ccc; /* Change background color when the button is disabled */
+  cursor: not-allowed; /* Change cursor to not-allowed when the button is disabled */
+}
+
+ul {
+  list-style-type: none; /* Remove bullet points from the list */
+  padding: 0; /* Remove default padding from the list */
+}
+
+li {
+  margin-bottom: 8px; /* Add margin below list items */
+}

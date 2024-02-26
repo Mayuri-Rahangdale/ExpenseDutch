@@ -1,0 +1,39 @@
+h2 {
+  color: #333; /* Set heading text color */
+}
+
+table {
+  width: 100%; /* Make the table take full width of its container */
+  border-collapse: collapse; /* Collapse border-spacing between table cells */
+  margin-top: 20px; /* Add some top margin to the table */
+}
+
+thead {
+  background-color: #f0f0f0; /* Set background color for the table header */
+}
+
+th,
+td {
+  padding: 12px; /* Add padding to table header and data cells */
+  text-align: left; /* Align text to the left within cells */
+  border: 1px solid #ddd; /* Add a border to all cells */
+}
+
+tr:nth-child(even) {
+  background-color: #f9f9f9; /* Set background color for even rows */
+}
+
+tr:hover {
+  background-color: #e0e0e0; /* Change background color on hover */
+}
+
+.hover-link {
+  cursor: pointer; /* Change cursor to pointer on hover */
+  color: #007bff; /* Set link color */
+  text-decoration: underline; /* Add underline on hover */
+}
+
+.hover-link:hover::before {
+  content: "\1F514"; /* Unicode for the bell symbol */
+  margin-right: 5px; /* Add some spacing between the symbol and text */
+}

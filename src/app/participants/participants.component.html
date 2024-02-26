@@ -1,0 +1,46 @@
+<div>
+  <h2>Add Participant</h2>
+  <form (ngSubmit)="onSubmit()" #participantForm="ngForm">
+    <label for="name">Name:</label>
+    <input
+      type="text"
+      id="name"
+      name="name"
+      [(ngModel)]="participant.name"
+      required
+    />
+
+    <label for="group">Group:</label>
+    <input
+      type="text"
+      id="group"
+      name="group"
+      [(ngModel)]="participant.group.name"
+      required
+    />
+
+    <button type="submit" [disabled]="participantForm.invalid">
+      Add Participant
+    </button>
+  </form>
+
+  <h2>Add Group</h2>
+  <label for="newGroupName">New Group Name:</label>
+  <input
+    type="text"
+    id="newGroupName"
+    name="newGroupName"
+    [(ngModel)]="newGroupName"
+    required
+  />
+
+  <button type="button" (click)="addGroup()">Add Group</button>
+
+  <h2>Participants List</h2>
+  <ul>
+    <li *ngFor="let participant of participants">
+      <!-- {{ participant.name }} ({{ participant.group }}) -->
+      {{ participant.name }} (Group: {{ participant.group.name }})
+    </li>
+  </ul>
+</div>

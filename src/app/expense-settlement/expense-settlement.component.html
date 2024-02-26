@@ -1,0 +1,31 @@
+<div *ngIf="expenseSettlement && expenseSettlement.length > 0">
+  <h2>Expense Settlement for {{ groupName }}</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Participant Name</th>
+        <th>Equal Share</th>
+        <th>Settlement Amount</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let settlement of expenseSettlement">
+        <td>{{ settlement.participantName }}</td>
+        <td>
+          {{ settlement.equalShare | currency : "INR" : "symbol" : "1.2-2" }}
+        </td>
+        <td>
+          {{
+            settlement.settlementAmount | currency : "INR" : "symbol" : "1.2-2"
+          }}
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<div *ngFor="let group of groups">
+  <a (click)="navigateToExpenseSettlement(group.name)" class="hover-link"
+    >{{ group.name }} Settlement</a
+  >
+</div>
